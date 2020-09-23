@@ -1,0 +1,31 @@
+<div class="container container-wrapper buffer-both">
+  <h1 class="title-medium">Product create</h1>
+  <div class="column-1-2">
+    <div class="form">
+      <%= form_for @product do |f| %>
+
+        <% if @product.errors.any? %>
+          <div class="form-errors">
+            <ul>
+              <% for message in @product.errors.full_messages %>
+                <li class="form-error-message"><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-field">
+          <%= f.label :name, 'Name', class: 'form-label' %>
+          <%= f.text_field :name, class: 'form-text-field' %>
+        </div>
+        <div class="form-field">
+          <%= f.label :description, 'Description', class: 'form-label' %>
+          <%= f.text_field :description, class: 'form-textarea' %>
+        </div>
+        <div class="form-action">
+          <%= f.submit 'Save', class: 'button button-small button-dark' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

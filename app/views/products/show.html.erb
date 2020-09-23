@@ -1,0 +1,17 @@
+<div class="product-header text-center">
+  <h1 class="title-medium">
+    <%= @product.name %>
+  </h1>
+
+  <div class="container text-center">
+    <p><%= @product.description %></p>
+  </div>
+
+  <div class="button button-green">
+    <%= link_to 'Update', edit_product_path(@product) %>
+  </div>
+
+  <div class="button button-red">
+    <%= link_to 'Delete', product_path(@product), method: :delete, data: {confirm: 'are you sure!'} %>
+  </div>
+</div>

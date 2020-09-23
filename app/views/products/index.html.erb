@@ -1,0 +1,13 @@
+<div class="content-wrapper buffer-both text-center">
+  <div class="buffer-both">
+    <h1 class="title-medium">All Products</h1>
+  </div>
+
+  <div class="buffer-both">
+    <%= link_to 'New product', new_product_path, class: 'button button-light' %>
+  </div>
+
+  <div class="products-list-item">
+    <%= render partial: 'products/product', collection: @products %>
+  </div>
+</div>
