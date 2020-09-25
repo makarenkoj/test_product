@@ -34,14 +34,13 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy!
 
-    redirect_to root_url, notice: 'Product delete!'
+    redirect_to root_url, notice: 'Product deleted!'
   end
 
   def show
   end
 
   private
-
   def load_product
     @product ||= Product.find params[:id]
   end

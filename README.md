@@ -1,24 +1,40 @@
-# README
+# Тестовое задание: Products
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  Создать модель Product со следующими атрибутами: name(string) и
+description(text);
+Должна быть проверка наличия, уникальности и длины (от 3 до 30 символов)
+значения Product#name;
+С выключенным javascript в броузере мы можем сделать следующее:
+ - по ссылке "/products" видим список продуктов;
+ - по ссылке "/products/new" видим форму создания нового продукта;
+ - по ссылке "/products/:id" видим страницу продукта;
+ - по ссылке "/products/:id/edit" видим форму редактирования информации о
+продукте;
+ - имеем возможность удалить продукт;
+С включенным javascript немного меняется поведение:
+ - по ссылке "/products/new" видим всплывающее окно с формой добавления
+продукта;
+ - по ссылке "/products/:id" видим всплывающее окно с информацией о продукте;
+ - по ссылке "/products/:id/edit" видим форму редактирования информации о
+продукте;
 
-Things you may want to cover:
+Это задание необходимо выполнить используя только стандартные средства RoR.
 
-* Ruby version
+Для всплывающего окна допускается использовать сторонние js-плагины.
 
-* System dependencies
+Обязательно необходимо отображать ошибки валидации: 
+ - в первом случае на отдельной странице,
+ - во втором в том же всплывающем окне.
 
-* Configuration
+Код модели и контроллера должен иметь 100% покрытие тестами (Test::Unit, RSpec
+или что-то другое).
 
-* Database creation
+Запишите сколько времени ушло на поиск решения и сколько времени на реализацию.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  Getting started
+  ==
+  
+ - Ruby '2.6.4'
+ - bundle install
+ - bundle exec rails db:migrate
+ - http://localhost:3000/
