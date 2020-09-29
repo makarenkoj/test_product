@@ -7,8 +7,8 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'hello', 'data-turbolinks-track': 'reload' %>
 
 </head>
 <body>
@@ -18,7 +18,7 @@
     <h1 class="header-title"><%= link_to "Products", root_path %></h1>
   </div>
 </div>
-
+<button id="greet-user-button">Push</button>
 <div class="content">
   <div class="container">
     <% if flash.any? %>
